@@ -39,7 +39,7 @@ while true; do
 done
 
 echo "Pinging $ip every $interval seconds.   Saving to $outfile.   Press Ctrl+C to kill."
-echo -e "\nPinging $ip\n" >> $outfile
+echo -e "\nPinging $ip on $(date +"%Y-%m-%d")\n" >> $outfile
 
 ping -i $interval $ip | \
     stdbuf -oL \
